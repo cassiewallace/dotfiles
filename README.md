@@ -2,7 +2,7 @@
 
 My macOS dotfiles as an iOS engineer working with AI coding agents: shell config, Claude Code setup, and a manifest of agent skills for Swift, SwiftUI, UIKit, and accessibility work.
 
-This repo is the source of truth for my AI-era dev environment: global Claude Code instructions, hooks that keep agents on the rails of Apple-platform tooling (FlowDeck instead of raw `xcodebuild`/`xcrun simctl`), and a reproducible list of agent skills covering Swift concurrency, Swift Testing, SwiftUI patterns, iOS/UIKit/AppKit accessibility audits, and the Airbnb Swift style guide. Inside:
+This repo is the source of truth for my AI-era dev environment: global Claude Code instructions, hooks that keep agents on the rails of Apple-platform tooling (FlowDeck instead of raw `xcodebuild`/`xcrun simctl`), and a reproducible list of agent skills covering Swift concurrency, Swift Testing, SwiftUI patterns, iOS/UIKit/AppKit accessibility audits, and the Airbnb Swift style guide.
 
 - **`zsh/`**: `.zshrc` and `.aliases`.
 - **`claude/.claude/`**: global config for [Claude Code](https://claude.com/claude-code).
@@ -14,14 +14,14 @@ This repo is the source of truth for my AI-era dev environment: global Claude Co
 
 ## Agent skills
 
-The skills in `skills.manifest` cover the surface area of iOS work I hand off to agents:
+These are installed via the [`npx skills`](https://github.com/vercel-labs/skills) CLI, which is the package manager for the open agent skills ecosystem. [skills.sh](https://skills.sh) is the browse/search surface for it; `npx skills add owner/repo@skill` is the install command. Every entry in `skills.manifest` resolves through it.
 
 | Skill | What it does | Source |
 |---|---|---|
+| `airbnb-swift-style` (mine) | enforces the Airbnb Swift style guide | [cassiewallace/Airbnb-Swift-Style-Agent-Skill](https://github.com/cassiewallace/Airbnb-Swift-Style-Agent-Skill) |
 | `swift-concurrency` | async/await, actors, Sendable, Swift 6 strict-concurrency migration | [avdlee/swift-concurrency-agent-skill](https://github.com/avdlee/swift-concurrency-agent-skill) |
 | `swift-testing-expert` | Swift Testing (`@Test`, `#expect`, traits, parameterization), XCTest migration | [avdlee/swift-testing-agent-skill](https://github.com/avdlee/swift-testing-agent-skill) |
 | `swiftui-expert-skill` | SwiftUI state, layout, animation, Instruments trace analysis | [avdlee/swiftui-agent-skill](https://github.com/avdlee/swiftui-agent-skill) |
-| `airbnb-swift-style` | enforces the Airbnb Swift style guide | [cassiewallace/Airbnb-Swift-Style-Agent-Skill](https://github.com/cassiewallace/Airbnb-Swift-Style-Agent-Skill) |
 | `ios-accessibility` | VoiceOver, Dynamic Type, traits, focus order; iOS-wide audit | [dadederk/iOS-Accessibility-Agent-Skill](https://github.com/dadederk/iOS-Accessibility-Agent-Skill) |
 | `uikit-accessibility-auditor` | UIKit-specific accessibility audits | [rgmez/apple-accessibility-skills](https://github.com/rgmez/apple-accessibility-skills) |
 | `swiftui-accessibility-auditor` | SwiftUI-specific accessibility audits | [rgmez/apple-accessibility-skills](https://github.com/rgmez/apple-accessibility-skills) |
