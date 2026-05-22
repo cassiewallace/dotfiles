@@ -1,0 +1,17 @@
+# Agent skills to re-install into ~/.agents/skills/ on a fresh machine.
+# Format: <skill-name> | <install-command>
+# Lines starting with `#` and blank lines are ignored.
+# install.sh skips any skill whose ~/.agents/skills/<skill-name>/ directory already exists.
+
+airbnb-swift-style           | npx skills add cassiewallace/Airbnb-Swift-Style-Agent-Skill -g -y
+appkit-accessibility-auditor | npx skills add rgmez/apple-accessibility-skills@appkit-accessibility-auditor -g -y
+find-skills                  | npx skills add vercel-labs/skills@find-skills -g -y
+ios-accessibility            | npx skills add dadederk/iOS-Accessibility-Agent-Skill@ios-accessibility -g -y
+swift-concurrency            | npx skills add avdlee/swift-concurrency-agent-skill@swift-concurrency -g -y
+swift-testing-expert         | npx skills add avdlee/swift-testing-agent-skill@swift-testing-expert -g -y
+swiftui-accessibility-auditor| npx skills add rgmez/apple-accessibility-skills@swiftui-accessibility-auditor -g -y
+swiftui-expert-skill         | npx skills add avdlee/swiftui-agent-skill@swiftui-expert-skill -g -y
+uikit-accessibility-auditor  | npx skills add rgmez/apple-accessibility-skills@uikit-accessibility-auditor -g -y
+
+# FlowDeck and RocketSim are installed via their own CLIs (not `npx skills`).
+# See the README for install notes. They bring their own Claude Code skills.
