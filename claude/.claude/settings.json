@@ -1,0 +1,23 @@
+{
+  "attribution" : {
+    "commit" : "",
+    "pr" : ""
+  },
+  "enabledPlugins" : {
+    "swift-lsp@claude-plugins-official" : true
+  },
+  "hooks" : {
+    "PreToolUse" : [
+      {
+        "hooks" : [
+          {
+            "command" : "\/Users\/cassiewallace\/.claude\/hooks\/flowdeck\/flowdeck-guard.sh",
+            "type" : "command"
+          }
+        ],
+        "matcher" : "Bash"
+      }
+    ]
+  },
+  "theme" : "dark-ansi"
+}
