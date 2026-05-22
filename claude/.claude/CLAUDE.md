@@ -5,7 +5,6 @@
 @/Users/cassiewallace/.agents/skills/appkit-accessibility-auditor/SKILL.md
 @/Users/cassiewallace/.agents/skills/find-skills/SKILL.md
 @/Users/cassiewallace/.agents/skills/uikit-accessibility-auditor/SKILL.md
-@/Users/cassiewallace/Developer/scavenger-hunt/.agents/skills/core-data-expert/SKILL.md
 
 ## Commit message preferences
 
@@ -17,14 +16,14 @@
 
 ## Verification
 
-- Never assert claims about code behavior, framework APIs, idiomatic patterns, or library internals from memory. Verify in the current session (cupertino, SDK source, running tests, simulator screenshot) or say "I don't know — let me check."
+- Never assert claims about code behavior, framework APIs, idiomatic patterns, or library internals from memory. Verify in the current session (cupertino, SDK source, running tests, simulator screenshot) or say "I don't know, let me check."
 - When a reviewer or user suggests a change, try it first. Defending the existing code is the second move, not the first.
 - If verification cost is high (e.g. needs the simulator and would be disruptive), say that and let the user decide whether to verify or trust the claim. Do not silently assert.
 
 ## PR preferences
 
-- Format PR titles as `[TICKET-ID] Title` with the ticket ID in square brackets, e.g. `[MOB-1079] Show streak button when coin flip begins`.
+- Format PR titles as `[TICKET-ID] Title` with the ticket ID in square brackets, e.g. `[PROJ-123] Persist navigation state across launches`.
 - Use "## Testing" (not "## Test plan") as the testing section heading.
 - Use "## Changes" (not "## What changed") as the changes section heading.
-- Write testing steps as user-facing scenarios (what the user does and sees), not implementation details. Reference the user type/situation from the Linear ticket when relevant — e.g. "as a user with an active multi-day streak" — and frame steps in simulator terms.
-- Prefer small, discrete commits with clear commit messages describing the change, even on draft PRs. Don't amend prior commits to fold in new changes — add new commits instead.
+- Write testing steps as user-facing scenarios (what the user does and sees), not implementation details. Reference the user type/situation from the Linear ticket when relevant (e.g. "as a returning user with an empty inbox") and frame steps in simulator terms.
+- Prefer small, discrete commits with clear commit messages describing the change, even on draft PRs. Don't amend prior commits to fold in new changes; add new commits instead.
