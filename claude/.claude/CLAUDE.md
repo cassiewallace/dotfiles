@@ -6,6 +6,10 @@
 @/Users/cassiewallace/.agents/skills/find-skills/SKILL.md
 @/Users/cassiewallace/.agents/skills/uikit-accessibility-auditor/SKILL.md
 
+## Code style preferences
+
+- Push shared behavior into the owning type rather than spreading it across call sites. Logging, multi-step sequences, and repeated error handling belong in the manager/service/repository that owns the operation. Call sites should handle only their own UI concerns (toasts, error models, navigation).
+
 ## Commit message preferences
 
 - Always write 1-line commit messages. No body, no trailing newlines, no extra paragraphs.
