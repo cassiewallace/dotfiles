@@ -9,3 +9,7 @@ source $HOME/.aliases
 
 # Themes
 ZSH_THEME="flazz"
+
+# Environment
+export PATH="$HOME/.local/bin:$PATH"
+export FAY_USER="cassie"
